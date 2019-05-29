@@ -1,0 +1,123 @@
+//colors
+$yellow: yellow;
+$blue: blue;
+$red: red;
+$white: white;
+$black_75: rgba(0, 0, 0, 0.75);
+
+//fonts
+$font_0: sans-serif;
+$font_1: Iceland;
+$font_2: cursive;
+
+//urls
+$url_0: url(https://wallpaperaccess.com/full/8624.jpg);
+
+//@extend-elements
+//original selectors
+//td, th
+%extend_1 {
+	border: 1px solid Red;
+	text-align: left;
+	padding: 8px;
+}
+
+
+body {
+	background-image: $url_0;
+	font-family: $font_0;
+	background-color: $yellow;
+	font-family: $font_1, $font_2;
+}
+.searchBar {
+	padding: 20px 0;
+	text-align: center;
+	background-color: $blue;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 8px 8px 0 0;
+}
+label {
+	font-size: 1.3rem;
+}
+input[type="text"] {
+	height: 40px;
+	padding-left: 10px;
+	font-family: $font_1, $font_2;
+}
+#pokeOutput {
+	padding: 50px;
+}
+#pokeImage {
+	display: block;
+	margin: 50px 0;
+	width: 180px;
+	position: relative;
+	left: -45px;
+}
+.base-title {
+	font-size: 1.3rem;
+	font-weight: 700;
+}
+.stat {
+	font-weight: 700;
+}
+.size {
+	display: inline-block;
+	float: right;
+	margin-right: 5px;
+}
+.container {
+	width: 450px;
+	margin-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: $red;
+	color: $white;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 15px;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 10px 10px 0 0 $black_75;
+}
+.image-container {
+	height: 300px;
+	background-color: ;
+	white-space: nowrap;
+	border: 1px solid Red;
+	color: $white;
+	font-size: 1.2rem;
+}
+.bigBtn {
+	height: 40px;
+	width: 120px;
+	font-weight: 700;
+	position: relative;
+	top: -2px;
+}
+.changeBtn {
+	height: 40px;
+	width: 54px;
+	font-size: 1.5rem;
+}
+table {
+	border-collapse: collapse;
+	width: 100%;
+	font-size: 1.2rem;
+}
+td {
+	@extend %extend_1;
+}
+th {
+	@extend %extend_1;
+}
+.pokeType {
+	padding: 5px;
+	color: $white;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 5px;
+	text-transform: capitalize;
+	margin-left: 5px;
+	font-weight: 700;
+}
+tr:nth-child(even) {
+	background-color: Red;
+}

@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="main.css">
+    <title></title>
+  </head>
+  <body>
+
+    <div class="container">
+  <div class="searchBar">
+      <label for="pokemon">PokeSearch:</label>
+      <input type="search" name="pokemon" id="search" placeholder="name or number" onsearch="load()">
+  </div>
+
+  <div id="pokeOutput">
+    <div class="top-container">
+      <div class="image-container">
+        <img src= "" alt="" id="pokeImage">
+      </div>
+    </div>
+
+    <div class="bottom-container">
+      <table>
+        <tr>
+          <th>Base</th>
+          <th>Stats</th>
+        </tr>
+        <tr>
+          <td>HP:</td>
+          <td id="hp"></td>
+        </tr>
+        <tr>
+          <td>Attack:</td>
+          <td id="attack"></td>
+        </tr>
+        <tr>
+          <td>Defense:</td>
+          <td id="defense"></td>
+        </tr>
+        <tr>
+          <td>Abilities:</td>
+          <td id="abilities"></td>
+        </tr>
+        <tr>
+      </table>
+    </div>
+  </div>
+</div>
+    <script src="main.js" charset="utf-8"></script>
+  </body>
+</html>
