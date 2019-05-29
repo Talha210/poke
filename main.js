@@ -11,6 +11,7 @@ requestAPI = (pokemon) => {
            abilities: data["abilities"][0]["ability"]["name"],
            picture: data["sprites"]["front_default"]
 
+
          }
         displayUser(poke)
 
@@ -60,6 +61,7 @@ displayUser = (pokem) => {
   document.getElementById('attack').innerText = pokem.attack
   document.getElementById('defense').innerText = pokem.defense
   document.getElementById('abilities').innerText = pokem.abilities
+  document.getElementById('name').innerText = pokem.name
   img = document.getElementById('pokeImage')
   img.setAttribute("src",pokem.picture)
 
